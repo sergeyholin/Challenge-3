@@ -23,12 +23,30 @@ function generatePassword(){
     userInput.push(prompt("How many characters do you want in your password?", "8 - 128 characters"), confirm("Include special characters?"), confirm("Include upper case characters?"), confirm("Include lower case characters?"), confirm("Include numbers?"))
   }
   };
+  
   console.log(userInput);
+  // -------------------------------------------------------------------------------------------------
+  // Alert notifying user about minimum lenght of 8 characters and maximum length of 128 characters.
+    if (userInput[0] < 8) {
+    for(var i = 0; i < 1; i++) {
+      alert("Minimum password length is 8 characters.");
+      return generatePassword();
+    }
+    } else if ((userInput[0] > 128)) {
+      for(var i = 0; i < 1; i++) {
+      alert("Maximum password length is 128 characters.");
+      return generatePassword();
+    }
+    };
+
+  console.log(userInput);
+  // -------------------------------------------------------------------------------------------------
   //Arrays--------------------------------------------------------------------------------------------
   var array1 = ["`","~","!","@","#","$","%","^","&","*","(",")","-","_","+","=","|","]","}","[","{","'",";",":","/","?",".",">",",","<"]
   var array2 = ["Q","W","E","R","T","Y","U","I","O","P","A","S","D","F","G","H","J","K","L","Z","X","C","V","B","N","M"];
   var array3 = ["q","w","e","r","t","y","u","i","o","p","a","s","d","f","g","h","j","k","l","z","x","c","v","b","n","m"];
   var array4 = ["1","2","3","4","5","6","7","8","9","0"]
+  // -------------------------------------------------------------------------------------------------
   //Conditional statements----------------------------------------------------------------------------
   // T T T T
   if (userInput[0] && userInput[1] && userInput[2] && userInput[3] && userInput[4]) {
@@ -84,20 +102,25 @@ function generatePassword(){
   else if (userInput[0] && userInput[1] && userInput[2] && userInput[3] && !userInput[4]) {
     var userInputProcessed = array2.concat(array3, array1);
   } 
-  // F F F F
+  // F F F F = "Pick at least one variable warning"------------------------------------------------
   else if (userInput[0] && !userInput[1] && !userInput[2] && !userInput[3] && !userInput[4]) {
-    var userInputProcessed = 0;
+    alert("Please pick at least one password variable.");
+    return generatePassword();
   } 
+  
   console.log(userInputProcessed)
-  //Randomizing input results ------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------
+  //Randomizing input results ---------------------------------------------------------------------------------------------------
   var results =[];
   for(var i = 0; i < userInput[0]; i++) {
     results.push(userInputProcessed[Math.floor(Math.random() * userInputProcessed.length)]);
   };
+  // -------------------------------------------------------------------------------------------------
   // Turning comma seperated characters into one word blob--------------------------------------------
   var password = results.join("")
-  console.log(password)
 
+  console.log(password)
+  // -------------------------------------------------------------------------------------------------
   return password;
 }
 
