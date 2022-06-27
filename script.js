@@ -21,25 +21,30 @@ function generatePassword(){
   if (generateBtn) {
     var userInput =[];
   for(var i = 0; i < 1; i++) {
-    userInput.push(prompt("How many characters do you want in your password?"), confirm("Include special characters?"), confirm("Include upper and lower characters?"))
+    userInput.push(prompt("How many characters do you want in your password?"), confirm("Include special characters?"), confirm("Include Upper characters?"))
   }
   };
   console.log(userInput);
   // Works, nex step------------------------------------------------------------
-  var arr0 = [4, true, true]
-  var arr1 = ["q", "w", "e", "r","t"];
-  var arr2 = ["Q", "W", "E", "R", "T"];
-  var arr3 = [1,2,3,4,5]
-  var arr4 = ["~", "!", "#", "$", "@"]
+  var array1 = ["q","w","e","r","t","y","u","i","o","p","a","s","d","f","g","h","j","k","l","z","x","c","v","b","n","m"];
+  var array2 = ["Q","W","E","R","T","Y","U","I","O","P","A","S","D","F","G","H","J","K","L","Z","X","C","V","B","N","M"];
+  var array3 = ["1","2","3","4","5","6","7","8","9","0"]
+  var array4 = ["`","~","!","@","#","$","%","^","&","*","(",")","-","_","+","=","|","]","}","[","{","'",";",":","/","?",".",">",",","<"]
+  // --------------------------------------------------------------------------------
 
-  if (arr0) {
-    var userInputProcessed = arr1.concat(arr2, arr3,arr4);
-
+  if (userInput[0] && userInput[1] && userInput[2]) {
+    var userInputProcessed = array1.concat(array2, array3,array4);
+  } else if (!userInput[1] && !userInput[2]) {
+    var userInputProcessed = array1.concat(array3);
+  } else if (!userInput[1]) {
+    var userInputProcessed = array1.concat(array2, array3);
+  } else if (!userInput[2]) {
+    var userInputProcessed = array1.concat(array3,array4);
   };
   console.log(userInputProcessed)
-  
+  // -----------------------------------------------------------------------------------
   var results =[];
-  for(var i = 0; i < arr0[0]; i++) {
+  for(var i = 0; i < userInput[0]; i++) {
     results.push(userInputProcessed[Math.floor(Math.random() * userInputProcessed.length)]);
   };
   console.log(results)
