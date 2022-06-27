@@ -4,7 +4,7 @@ by Sergey Holin
 
 GitHub Repo Link: https://github.com/sergeyholin/Challenge-3
 
-Live Application Link: 
+Live Application Link: https://sergeyholin.github.io/Challenge-3/
 
 1) ACCEPTANCE CRITERIA:
 
@@ -37,3 +37,5 @@ B) I also borrowed a pice of code from CSS Tricks by Chris Coyier on how to sele
 Link: https://css-tricks.com/snippets/javascript/select-random-item-array/
 
 4) SCREENSHOT:
+
+<img src="./screenshot.png/"/>
