@@ -43,11 +43,14 @@ function generatePassword(){
   };
   console.log(userInputProcessed)
   // -----------------------------------------------------------------------------------
-  var results =[];
+  var password =[];
   for(var i = 0; i < userInput[0]; i++) {
-    results.push(userInputProcessed[Math.floor(Math.random() * userInputProcessed.length)]);
+    password.push(userInputProcessed[Math.floor(Math.random() * userInputProcessed.length)]);
   };
-  console.log(results)
+  console.log(password)
+  // ---------------------------------------------------------
+ 
+  
   // prompt = length
     // let pwdLength = prompt("how many characters")
     // console.log(pwdLength)
@@ -69,6 +72,10 @@ function generatePassword(){
     // array method to check if something is in array
   // generate random password
   // return password
-
+  
   return password;
 }
+
+
+
+
