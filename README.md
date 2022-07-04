@@ -2,9 +2,15 @@
 Module 3 Challenge: Password Generator
 by Sergey Holin
 
-GitHub Repo Link: https://github.com/sergeyholin/Challenge-3
+GitHub Repo Link: https://github.com/sergeyholin/Password-Generator
 
-Live Application Link: https://sergeyholin.github.io/Challenge-3/
+Live Application Link: https://sergeyholin.github.io/Password-Generator/
+
+NOTES: As per assignement the password minimum lenght is restricted to 8 characters and maximum length is restricted to 128 characters.
+
+ABOUT THE APP:
+
+Password Generator is a simple app that allows a user to create a strong password based on one or more of possible criterias: lowercase, uppercase, numeric, and/or special characters.
 
 1) ACCEPTANCE CRITERIA:
 
@@ -38,4 +44,4 @@ Link: https://css-tricks.com/snippets/javascript/select-random-item-array/
 
 4) SCREENSHOT:
 
-<img src="./screenshot.png/"/>
+<img src="./assets/img//screenshot.png/"/>
